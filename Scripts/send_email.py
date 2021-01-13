@@ -1,28 +1,11 @@
-# import smtplib
-
-# def send_email(receive_email, productName, product_price, url):
-# 	msg = f"""Product Name:- {productName}, Current Price:- {product_price}, URL:- {url}"""
-# 	print(msg)
-# 	try:
-# 		server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-# 		server.login("mahir8239@gmail.com", "mahirshahshahmahir")
-# 		server.sendmail("mahir8239@gmail.com", receive_email, msg)
-# 		print("Mail Sent")
-# 	except:
-# 		print("Cannot send Mail")
-# 	finally:
-# 		server.quit()
-
-
-
 import smtplib, ssl
 
 def send_email(receive_email, productName, product_price, url):
 	port = 587  # For starttls
 	smtp_server = "smtp.gmail.com"
-	sender_email = "mahir8239@gmail.com"
+	sender_email = ""   #sender's emailID 
 	receiver_email = receive_email
-	password = "mahirshahshahmahir"
+	password = ""       #sender's emailID password
 	message = f""" 
 	Subject:- Price Tracker
 
