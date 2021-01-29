@@ -1,0 +1,25 @@
+<html>
+        <style>
+            body
+            {
+                background-color:#93d2db;
+            }
+            #search
+            {
+                width:7em;
+                height: 3em;
+                background-color: #FFA351FF;
+            }
+        </style>
+
+
+    <body>
+    
+        <h1 align="center">Ebay Scrapper</h1>
+        <form method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Submit" id="search">
+        </form>
+    </body>
+</html>

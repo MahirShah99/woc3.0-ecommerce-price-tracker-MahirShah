@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <h1 align="center">Details Obtained after Scraping:</h1>
+        <table>
+            <tr>
+                <td style="widht:300px;"><b>Product Name:</b></td>
+                <td>{{data.productName}}</td>
+            </tr>
+            <tr rowspan="2">
+                {% if data.status %}
+                    <td><b>Availability:</b></td>
+                    <td>In Stock</td>
+                {% endif %}
+                
+            </tr>
+            <tr>
+                <td><b>Current Price:</b></td>
+                <td>{{data.price}}</td>
+            </tr>
+            </table>
+                {% if data.status %}
+                    <td><b style="color:green;">Hurray ! This item falls in your desired range</b></td>
+                {% else %}
+                    <td><b style="color:red;">This item is not in your desired range</b></td>
+                {% endif %}       
+            <table>
+                <tr>
+                    <td><b>Product</b></td>
+                    <td><a href="{{data.link}}">Link</a></td>
+                </tr>
+            </table>
+    </body>
+</html>
